@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  pgsql:
+    image: postgres:alpine
+    ports:
+      - '5432:5432'
+    container_name: 'dockerLivraria'
+    restart: always
+    volumes:
+      - ./storage/pg-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: pgpassword
+    networks:
+      - nestjs-network  
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - nestjs-network
+
+networks: 
+  nestjs-network:
+    driver: bridge      
+
+volumes:
+  pg-data:
