@@ -6,7 +6,7 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
   port: 5432,
   username: 'pguser',
   password: 'pgpassword',
-  database: 'db_livraria',
+  database: 'dockerLivraria',
   entities: [__dirname + '/../**/*.entity.{js,ts}'],
   synchronize: true,
 };
