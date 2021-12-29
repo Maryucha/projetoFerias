@@ -29,8 +29,6 @@
     "lint:js:fix": "npm run lint:js -- --fix"
   },
   "dependencies": {
-    "@commitlint/cli": "^16.0.1",
-    "@commitlint/config-conventional": "^16.0.0",
     "@nestjs/common": "^8.0.0",
     "@nestjs/config": "^1.1.5",
     "@nestjs/core": "^8.0.0",
@@ -51,6 +49,9 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@compodoc/compodoc": "^1.1.16",
     "@nestjs/cli": "^8.0.0",
     "@nestjs/schematics": "^8.0.0",
     "@nestjs/testing": "^8.0.0",
@@ -68,6 +69,7 @@
     "lint-staged": "^12.1.4",
     "prettier": "^2.3.2",
     "source-map-support": "^0.5.20",
+    "standard-version": "^9.3.2",
     "supertest": "^6.1.3",
     "ts-jest": "^27.0.3",
     "ts-loader": "^9.2.3",
